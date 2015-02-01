@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="">
   <head>
     <meta charset="utf-8">
@@ -60,8 +60,8 @@
 		data-48000="opacity:1">
       <ul>
         <li><a href="#story" data-menu-top="0">ನಮ್ಮ ಕಥೆ</a></li>
-		<li><a href="mailto:vh+vivaaha@mvarsha.com?Subject=Vivaaha Website">ಸಂಪರ್ಕಿಸಿ</a></li>
         <li><a target="_blank" href="https://www.google.co.in/maps/place/Sri+Gurunarasimha+Kalyana+Mandira/@12.949719,77.56801,17z/data=!3m1!4b1!4m2!3m1!1s0x3bae15f152c969f1:0x531570f2be6ec4b4">ನಕ್ಷೆ</a></li>
+        <li><a href="#info" id="info">ಮಾಹಿತಿ</a></li>
       </ul>
     </nav>
 	<main>
@@ -215,7 +215,19 @@
 					<img src="images/fsong2.png" alt="song">
 				</div>
 			</div>
-		</section>			
+		</section>
+        <li><a href="mailto:vh+vivaaha@mvarsha.com?Subject=Vivaaha Website">ಸಂಪರ್ಕಿಸಿ</a></li>
+
+        <div class="popupBox" id="infoPopup">
+            <h4 id="infoheading" align="center">ತಾಣದ ಬಗ್ಗೆ ಮಾಹಿತಿ</h4>
+			<ul id="infolist">
+				<li class="infoitem">ರಚನೆ ಮತ್ತು ನಿರ್ಮಾಣ - ಮದುಮಗಳಿಂದ</li>
+				<li class="infoitem">ಯೋಜನೆ ಮತ್ತು ಕಲ್ಪನೆ - ಮದುಮಗನಿಂದ</li>
+				<li class="infoitem">HTML5,  <a class="infolinks" href="http://jquery.com/">jQuery</a>,  <a class="infolinks" href="https://github.com/Prinzhorn/skrollr"> skrollr</a> ಹಾಗೂ ಪ್ರೀತಿ♥ಯಿಂದ ನಿರ್ಮಿತ</li>
+                <li class="infoitem">ಕವಿಗಳು - <a class="infolinks" href="https://www.youtube.com/watch?v=UK9PzXoot9U">ನ. ಕೃ. ಸತ್ಯನಾರಾಯಣ</a>, <a class="infolinks" href="https://www.youtube.com/watch?v=fiE40KsvW_o">ಕುವೆಂಪು</a>, <br ><a class="infolinks" href="http://www.hungama.com/music/song-baare-rajakumari/1809790">ಬಿ. ಆರ್. ಲಕ್ಷ್ಮಣರಾವ್</a></li>
+				<li class="infoitem">ಸಂಪರ್ಕಿಸಿ - <a class="infolinks" href="mailto:vh+vivaaha@mvarsha.com">vh+vivaaha@mvarsha.com</a> </li>
+			</ul>
+        </div>
 	</main>
 		
     <script src="scripts/main.min.js"></script>
@@ -251,6 +263,21 @@
                       }
                       });
                       
+      var infopopup = document.getElementById("infoPopup");
+      document.getElementById("info").onclick = function () {
+          infopopup.style.display = "block";
+      };
+    $(document).mouseup(function (e)
+        {
+        var container = $("infoPopup");
+        
+        if (!container.is(e.target)
+            && container.has(e.target).length === 0)
+        {
+        $("#infoPopup").css("display","none");
+        }
+    });
+    
 	(function pulse(back, i) {
     var el = $('#heart img'),
         wd = back    ? -20 : 20,

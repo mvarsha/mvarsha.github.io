@@ -3956,7 +3956,7 @@ main {
 
   .navdrawer-container {
     position: fixed;
-	left:40%;
+	left:42%;
     bottom:2%;
     background-color:rgba(255, 255, 255, 0);
     width: 40%;
@@ -4237,11 +4237,44 @@ main {
 	text-align:center;
 }
 
-#boy, #girl {
-	bottom:45%;
-	width:100%;
-	z-index:101;
+.popupBox {
+    display:none;
+    overflow:hidden;
+    position: fixed;
+    width: 500px;
+    height: 340px;
+    left: 45%;
+    bottom: 8%;
+    background:url(../images/info.png);
+    background-repeat: no-repeat;
+	background-size:100% 100%;
+    z-index: 200;
 }
+
+.infoitem {
+    left:18px;
+    color:white;
+}
+
+#infoheading{
+    margin-top:35px;
+    color:white;
+}
+
+#infolist{
+    margin-top:-32px;
+}
+
+a.infolinks:link {
+    color:rgba(222,204,181, 1);
+}
+
+a.infolinks:visited {
+    color:rgba(222,204,181, 1);
+}
+
+a.infolinks:link:hover {color:rgba(222,0,0, 1);}
+a.infolinks:visited:hover {color:rgba(222,0,0, 1);}
 
 #transform {
 	width:70%;
